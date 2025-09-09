@@ -30,7 +30,7 @@ test("inicia en 0", () => {
 
 test("incrementa y guarda", () => {
   render(<ContadorClics />);
-  const button = screen.getByRole("button");
+  const button = screen.getByText("Incrementar");
 
   fireEvent.click(button);
 
@@ -38,14 +38,16 @@ test("incrementa y guarda", () => {
   expect(screen.getByText(/Clics: 1/i)).toBeInTheDocument();
 
   // Se guarda en localStorage
-  expect(localStorage.getItem("counter")).toBe("1");
+  expect(localStorage.getItem("clickCounter")).toBe("1");
 });
 
 test("recupera valor de localStorage al recargar", async () => {
-  localStorage.setItem("counter", "5");
+  localStorage.setItem("clickCounter", "5");
 
   render(<ContadorClics />);
 
   // esperamos a que el efecto cargue
-  expect(await screen.findByText(/Clics: 5/i)).toBeInTheDocument();
+  expect(await screen.findByText((content) => {
+    return content.replace(/\s+/g, ' ').trim() === "Clics: 5";
+  })).toBeInTheDocument();
 });
