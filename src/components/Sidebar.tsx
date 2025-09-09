@@ -11,6 +11,11 @@ const items: SidebarItem[] = [
   { label: "Responsive Layouts", route: "/layouts" },
   { label: "Text-to-Speech", route: "/tts" },
   { label: "Figuras Geometricas", route: "/three_2" },
+  { label: "Contador de Clics", route: "/contador" },
+  { label: "Conversor de Unidades", route: "/conversor" },
+  { label: "Lista de Tareas", route: "/tareas" },
+  { label: "Tablas de Multiplicar", route: "/tablas" },
+  { label: "Validación de Contraseña", route: "/validacion" },
 ];
 
 export default function Sidebar() {

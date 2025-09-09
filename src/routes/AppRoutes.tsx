@@ -8,6 +8,11 @@ import LayoutsView from "../views/LayoutsView";
 import SpeechDemoView from "../views/SpeechDemoView";
 import GeometryExplorer from "../views/GeometryExplorer";
 import SettingsView from "../views/SettingsView";
+import ContadorClics from "../views/ContadorClics";
+import ConversorUnid from "../views/ConversorUnid";
+import ListaTareas from "../views/ListaTareas";
+import TablasMul from "../views/TablasMul";
+import ValidContrasena from "../views/ValidContrasena";
 
 export default function AppRoutes() {
   return (
@@ -19,6 +24,11 @@ export default function AppRoutes() {
         <Route path="tts" element={<SpeechDemoView />} />
         <Route path="three_2" element={<GeometryExplorer />} />
         <Route path="settings" element={<SettingsView />} />
+        <Route path="contador" element={<ContadorClics />} />
+        <Route path="conversor" element={<ConversorUnid />} />
+        <Route path="tareas" element={<ListaTareas />} />
+        <Route path="tablas" element={<TablasMul />} />
+        <Route path="validacion" element={<ValidContrasena />} />
       </Route>
     </Routes>
   );
